@@ -1,0 +1,6 @@
+go 1.20
+
+use (
+	./github.com/Geun-Oh/design-pattern-with-go
+	./github.com/Geun-Oh/initial-study
+)
