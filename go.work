@@ -7,4 +7,5 @@ use (
 	./github.com/Geun-Oh/distributed-services-with-go/WriteALogPackage
 	./github.com/Geun-Oh/initial-study
 	./github.com/Geun-Oh/jira-github-automation-with-go
+	./github.com/Geun-Oh/fiber-react/server
 )
