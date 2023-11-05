@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package log.v1;
+
+option go_package = "github.com/Geun-Oh/distributed-services-with-go/ServeRequestsWithgRPC/api/v1";
+
+message REcord {
+    bytes value = 1;
+    uint64 offset = 2;
+}
