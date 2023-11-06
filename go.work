@@ -8,4 +8,5 @@ use (
 	./github.com/Geun-Oh/initial-study
 	./github.com/Geun-Oh/jira-github-automation-with-go
 	./github.com/Geun-Oh/fiber-react/server
+	./github.com/Geun-Oh/fiber-react/react-in-go
 )
