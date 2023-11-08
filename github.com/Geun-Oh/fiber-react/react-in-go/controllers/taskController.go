@@ -18,7 +18,9 @@ func FetchTasks(c *fiber.Ctx) error {
 }
 
 func CreateTask(c *fiber.Ctx) error {
-	var record model.Task
+	record := new(model.Task)
+
+	log.Println(record)
 
 	if err := c.BodyParser(&record); err != nil {
 		log.Println("Parse Error at create task")
@@ -27,6 +29,8 @@ func CreateTask(c *fiber.Ctx) error {
 			Body:  "",
 		})
 	}
+
+	log.Println(record.Title, record.Body)
 
 	result := initializers.DBConn.Create(record)
 
