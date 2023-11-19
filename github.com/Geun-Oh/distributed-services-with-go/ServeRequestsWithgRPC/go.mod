@@ -1,4 +1,4 @@
-module ServeRequestsWithgRPC
+module github.com/Geun-Oh/distributed-services-with-go/ServeRequestsWithgRPC
 
 go 1.20
 
