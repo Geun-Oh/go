@@ -10,7 +10,8 @@ import (
 var (
 	offWidth uint64 = 4
 	posWidth uint64 = 8
-	entWidth        = offWidth + posWidth
+	// calculate location where offset points out.
+	entWidth = offWidth + posWidth
 )
 
 type index struct {
@@ -19,6 +20,7 @@ type index struct {
 	size uint64
 }
 
+// Creates index for that file
 func newIndex(f *os.File, c Config) (*index, error) {
 	idx := &index{
 		file: f,
@@ -43,6 +45,7 @@ func newIndex(f *os.File, c Config) (*index, error) {
 	return idx, nil
 }
 
+// Synchronize real file data with mmap file. Real file content saved in safe store.
 func (i *index) Close() error {
 	if err := i.mmap.Sync(gommap.MS_SYNC); err != nil {
 		return err
